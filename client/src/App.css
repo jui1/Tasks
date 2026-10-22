@@ -1,0 +1,270 @@
+.app {
+  width: min(760px, 100%);
+  margin: 0 auto;
+  padding: 28px 16px 64px;
+  padding-bottom: calc(64px + env(safe-area-inset-bottom));
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.eyebrow {
+  margin: 0 0 4px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.lede {
+  margin: 8px 0 0;
+  color: var(--muted);
+  max-width: 42ch;
+}
+
+.panel,
+.task {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.panel {
+  padding: 16px;
+  margin-bottom: 18px;
+}
+
+.composer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 160px auto;
+  gap: 10px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg);
+}
+
+input:focus,
+select:focus,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.actions,
+.task-actions,
+.filters,
+.confirm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.composer .actions {
+  align-self: end;
+}
+
+button {
+  min-height: 46px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.primary {
+  border-color: transparent;
+  background: var(--accent);
+  color: #f7fffb;
+  font-weight: 700;
+}
+
+.primary:hover:not(:disabled) {
+  background: var(--accent-strong);
+}
+
+.ghost:hover:not(:disabled),
+.danger:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+
+.danger {
+  color: var(--danger);
+  background: var(--danger-soft);
+  border-color: transparent;
+}
+
+.filters {
+  margin-bottom: 14px;
+}
+
+.filters button,
+.filters .count {
+  min-height: 40px;
+}
+
+.filters button[aria-pressed="true"] {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.banner {
+  margin: 0 0 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.banner button {
+  margin-left: 8px;
+  min-height: 36px;
+  background: transparent;
+  color: inherit;
+}
+
+.list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.task {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+}
+
+.task header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.task h2 {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.meta {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.badge {
+  flex: none;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: var(--line);
+}
+
+.badge.pending {
+  background: var(--pending-bg);
+  color: var(--pending-ink);
+}
+
+.badge.progress {
+  background: var(--progress-bg);
+  color: var(--progress-ink);
+}
+
+.badge.completed {
+  background: var(--done-bg);
+  color: var(--done-ink);
+}
+
+.task-actions > label {
+  flex: 1 1 180px;
+}
+
+.task-actions select {
+  width: 100%;
+  min-width: 0;
+}
+
+.empty,
+.loading {
+  padding: 28px 16px;
+  text-align: center;
+  color: var(--muted);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+}
+
+.confirm {
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 4px;
+  color: var(--muted);
+}
+
+.confirm p {
+  margin: 0;
+}
+
+@media (max-width: 680px) {
+  .header,
+  .task header,
+  .confirm {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .composer {
+    grid-template-columns: 1fr;
+  }
+
+  .composer .actions button,
+  .task-actions button,
+  .confirm button,
+  .filters button {
+    flex: 1 1 auto;
+  }
+
+  .task-actions select {
+    width: 100%;
+  }
+}

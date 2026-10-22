@@ -1,0 +1,81 @@
+/* :root {
+  --bg: #f3f6f4;
+  --bg-accent: #e7f0ea;
+  --surface: #ffffff;
+  --ink: #1a2420;
+  --muted: #5d6b64;
+  --line: #d7e2db;
+  --accent: #0f6e56;
+  --accent-strong: #0b5644;
+  --accent-soft: #e5f5ef;
+  --danger: #9f2d2d;
+  --danger-soft: #fdecec;
+  --pending-bg: #fff4d8;
+  --pending-ink: #8a5a00;
+  --progress-bg: #e5f0fb;
+  --progress-ink: #1d4f86;
+  --done-bg: #e4f6ea;
+  --done-ink: #1b6b3a;
+  --shadow: 0 10px 30px rgba(26, 36, 32, 0.06);
+  --radius: 16px;
+  --sans: "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  color-scheme: light;
+  font: 16px/1.45 var(--sans);
+  color: var(--ink);
+  background:
+    radial-gradient(900px 420px at 10% -10%, var(--bg-accent), transparent 60%),
+    var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121816;
+    --bg-accent: #1b2a24;
+    --surface: #1c2421;
+    --ink: #f3f7f4;
+    --muted: #a8b7b0;
+    --line: #2d3b35;
+    --accent: #3dbe98;
+    --accent-strong: #8ee0c4;
+    --accent-soft: #16352c;
+    --danger: #ffb4b4;
+    --danger-soft: #3a2222;
+    --pending-bg: #3a3018;
+    --pending-ink: #f6d48a;
+    --progress-bg: #1a2c40;
+    --progress-ink: #b9d6f6;
+    --done-bg: #173226;
+    --done-ink: #b7ebc8;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+    color-scheme: dark;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+#root {
+  min-height: 100svh;
+} */
